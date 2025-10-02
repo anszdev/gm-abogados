@@ -1,0 +1,15 @@
+<div class="container">
+  <slot />
+</div>
+<style>
+  .container {
+    padding: 0 1rem;
+    margin: 0 auto;
+    width: 100%;
+
+    @media screen and (width >= 768px) {
+      max-width: 80rem;
+      padding: 0;
+    }
+  }
+</style>
