@@ -1,0 +1,80 @@
+:root {
+  --gm-primary: #1f3b5a;
+  --gm-text: #6a6a84;
+  --gm-title-text: #151515;
+  --gm-bg-secundary: #fffefe;
+  --gm-bg: #efeef2;
+
+  --font-title: "Merriweather Variable", serif;
+  --font-body: "Inter Variable", sans-serif;
+}
+
+/* 1. Usa un box-model más intuitivo en todos los elementos. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Elimina los márgenes por defecto. */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* 3. Permite que los porcentajes funcionen para la altura. */
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 4. Mejora la tipografía y suavizado de fuentes. */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Facilita el trabajo con imágenes y otros medios. */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Elimina los estilos por defecto de los formularios. */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Evita desbordamientos de texto. */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--gm-bg);
+  color: var(--gm-text);
+}
