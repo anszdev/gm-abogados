@@ -1,0 +1,60 @@
+---
+import Button from "../common/Button.astro";
+import NavLink from "./NavLink.astro";
+---
+
+<div class="mobile-menu" id="menu">
+  <ul class="nav-links">
+    <NavLink href="#sobre-nosotros">Sobre Nosotros</NavLink>
+    <NavLink href="#problemas">Problemas</NavLink>
+    <NavLink href="#servicios">Servicios</NavLink>
+    <NavLink href="#casos-de-exito">Casos de Éxito</NavLink>
+  </ul>
+  <div class="cta-button">
+    <Button>Obtén Asesoría Ahora</Button>
+  </div>
+</div>
+
+<style>
+  .mobile-menu {
+    background-color: var(--gm-bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100dvh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem 1.25rem;
+    gap: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease;
+  }
+
+  .mobile-menu.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links {
+    background-color: var(--gm-bg-secundary);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 1.2rem 1rem;
+    color: var(--gm-title-text);
+    list-style: none;
+  }
+</style>
+<script>
+  const $navMenu = document.querySelector("#nav-icon");
+  const $menu = document.querySelector("#menu");
+  $navMenu?.addEventListener("click", () => {
+    const menuIsOpen = ($navMenu as HTMLElement).classList.contains("open");
+    $menu?.classList.toggle("visible", !menuIsOpen);
+  });
+</script>
