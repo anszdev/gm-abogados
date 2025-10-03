@@ -1,0 +1,30 @@
+<svg
+  width="200"
+  height="200"
+  viewBox="0 0 200 200"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  id="gm_header-image-svg"
+>
+  <g clip-path="url(#clip0_221_10)">
+    <path
+      d="M0 0H100C155.228 0 200 44.7715 200 100V200H100C44.7715 200 0 155.228 0 100V0Z"
+      fill="url(#paint0_linear_221_10)"></path>
+  </g>
+  <defs>
+    <linearGradient
+      id="paint0_linear_221_10"
+      x1="100"
+      y1="0"
+      x2="100"
+      y2="200"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#b58f4c"></stop>
+      <stop offset="1" stop-color="#d9c39c"></stop>
+    </linearGradient>
+    <clipPath id="clip0_221_10">
+      <rect width="200" height="200" fill="white"></rect>
+    </clipPath>
+  </defs>
+</svg>
