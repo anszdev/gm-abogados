@@ -1,30 +1,45 @@
 ---
-const { href } = Astro.props;
+interface Button {
+  href: string;
+  ariaLabel: string;
+  widthComplete?: boolean;
+}
+
+const { href, ariaLabel, widthComplete = false } = Astro.props;
 ---
 
-<a href={href} class="button" role="button">
-  <span class="button-text">
+<a
+  href={href}
+  class="gm_button"
+  style={`display: ${widthComplete ? "block" : "inline-block"}`}
+  role="button"
+  aria-label={ariaLabel}
+>
+  <span class="gm_button-text">
     <slot />
   </span>
 </a>
 
 <style>
-  .button {
-    position: relative;
-    display: block;
+  .gm_button {
     padding: 1rem 2rem;
     border-radius: 9999px;
     background: linear-gradient(to right, var(--gm-primary), #35597c);
     box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
     transition: transform 150ms ease-in-out;
     text-align: center;
+    cursor: pointer;
+
+    @media screen and (width >= 768px) {
+      display: inline-block;
+    }
   }
 
-  .button:active {
+  .gm_button:active {
     transform: scale(0.95);
   }
 
-  .button-text {
+  .gm_button-text {
     color: white;
     font-size: 1.125rem;
     font-weight: 500;
