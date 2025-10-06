@@ -1,0 +1,60 @@
+---
+import Section from "@common/Section.astro";
+import Container from "../common/Container.astro";
+import SectionTitle from "../common/SectionTitle.astro";
+import Button from "../common/Button.astro";
+import SlidesCards from "./SlideCards.astro";
+---
+
+<Section id="problemas" background="secondary">
+  <Container>
+    <div class="gm_problems-content">
+      <div>
+        <SectionTitle>
+          ¿Te Identificas con alguna de estas situaciones?
+        </SectionTitle>
+      </div>
+      <div class="gm_problems-text">
+        <p class="gm_section-text">
+          Sabemos que el ambiente laboral puede ser injusto. Si enfrentas alguna
+          de estas situaciones, no estás solo. No permitas que la incertidumbre
+          te gane.
+        </p>
+        <div class="gm_section-button">
+          <Button>Obtén Asesoría Ahora</Button>
+        </div>
+      </div>
+    </div>
+    <SlidesCards />
+  </Container>
+</Section>
+
+<style>
+  .gm_problems-text {
+    p {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      font-weight: 500;
+      line-height: 1.25;
+
+      @media screen and (width >= 768px) {
+        max-width: 42rem;
+        font-size: 1.4rem;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .gm_problems-content {
+    @media screen and (width >= 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 4rem;
+    }
+  }
+
+  .gm_section-button {
+    padding-top: 2rem;
+  }
+</style>
