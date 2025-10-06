@@ -1,11 +1,15 @@
 ---
-interface Button {
-  href: string;
-  ariaLabel: string;
+interface Props {
+  href?: string;
+  ariaLabel?: string;
   widthComplete?: boolean;
 }
 
-const { href, ariaLabel, widthComplete = false } = Astro.props;
+const {
+  href = "#contacto",
+  ariaLabel = "Contactar",
+  widthComplete = false,
+} = Astro.props;
 ---
 
 <a
@@ -29,6 +33,7 @@ const { href, ariaLabel, widthComplete = false } = Astro.props;
     transition: transform 150ms ease-in-out;
     text-align: center;
     cursor: pointer;
+    text-decoration: none;
 
     @media screen and (width >= 768px) {
       display: inline-block;
