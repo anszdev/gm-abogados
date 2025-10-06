@@ -5,6 +5,7 @@
   --gm-bg-secondary: #fffefe;
   --gm-bg: #efeef2;
   --gm-accent: #b58f4c;
+  --gm-accent-gradient: linear-gradient(to bottom, var(--gm-accent), #d9c39c);
 
   --gm-family-title: "Merriweather Variable", serif;
   --gm-family-body: "Inter Variable", sans-serif;
