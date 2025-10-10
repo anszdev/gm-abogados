@@ -1,9 +1,52 @@
 ---
 import Section from "@common/Section.astro";
-import Container from "../common/Container.astro";
-import SectionTitle from "../common/SectionTitle.astro";
-import Button from "../common/Button.astro";
-import SlidesCards from "./SlideCards.astro";
+import Container from "@common/Container.astro";
+import SectionTitle from "@common/SectionTitle.astro";
+import Button from "@common/Button.astro";
+import SlidesCards from "@common/SlideCards.astro";
+
+const cardsData = [
+  {
+    title: "Despido injustificado sin liquidación",
+    content:
+      "El empleador termina la relación laboral sin causa legal y sin pagar las indemnizaciones y prestaciones obligatorias al trabajador.",
+    icon: "/images/document-dismiss.svg",
+    tags: ["ART. 48"],
+  },
+  {
+    title: "Acoso Laboral o Discriminación",
+    content:
+      "Cualquier trato hostil, intimidatorio o diferencia de trato injustificada en el trabajo, basada en características personales, que afecte la dignidad o cree un ambiente ofensivo.",
+    icon: "/images/emoji-sad.svg",
+    tags: ["ART. 3o. Bis", "ART. 133"],
+  },
+  {
+    title: "Falta de Pago de Horas Extras o Prestaciones",
+    content:
+      "El empleador no paga el tiempo trabajado fuera de la jornada legal (horas extras) o no entrega las prestaciones obligatorias por ley, como aguinaldo, vacaciones o prima vacacional.",
+    icon: "/images/money.svg",
+    tags: ["ART. 67", "ART. 68"],
+  },
+  {
+    title: "Problemas con tu Contrato o Salario",
+    content:
+      "Cuando tu contrato no está por escrito, incluye cláusulas ilegales que renuncian a tus derechos, o tu salario se paga incompleto, con retraso o es inferior al mínimo legal.",
+    icon: "/images/contract.svg",
+    tags: ["ART. 25", "ART. 110"],
+  },
+  {
+    title: "Accidentes en el trabajo",
+    content:
+      "Lesiones o enfermedades sufridas por el trabajador a causa o con motivo de su trabajo, que pueden generar incapacidad temporal, permanente o la muerte.",
+    icon: "/images/doctor.svg",
+    tags: ["ART. 473", "ART. 487"],
+  },
+  {
+    title: "¿Tu situación es distinta? Cuéntanos tu caso.",
+    icon: "/images/handshake.svg",
+    href: "#contacto",
+  },
+];
 ---
 
 <Section id="problemas" background="secondary">
@@ -25,7 +68,7 @@ import SlidesCards from "./SlideCards.astro";
         </div>
       </div>
     </div>
-    <SlidesCards />
+    <SlidesCards cardsData={cardsData} />
   </Container>
 </Section>
 
