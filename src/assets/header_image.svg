@@ -20,8 +20,8 @@
       y2="200"
       gradientUnits="userSpaceOnUse"
     >
-      <stop stop-color="#b58f4c"></stop>
-      <stop offset="1" stop-color="#d9c39c"></stop>
+      <stop stop-color="#d9c39c"></stop>
+      <stop offset="1" stop-color="#b58f4c"></stop>
     </linearGradient>
     <clipPath id="clip0_221_10">
       <rect width="200" height="200" fill="white"></rect>
