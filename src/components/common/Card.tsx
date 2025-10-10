@@ -6,6 +6,7 @@ interface CardProps {
   cardContent?: string;
   cardIcon?: string;
   cardTags?: string[];
+  href?: string;
 }
 
 export function Card({
@@ -13,6 +14,7 @@ export function Card({
   cardContent,
   cardIcon,
   cardTags,
+  href,
 }: CardProps) {
   const [isShowContent, setIsShowContent] = useState(false);
 
@@ -50,7 +52,9 @@ export function Card({
       </div>
       <button
         className="gm_slide-card-button"
-        onClick={handleToggleShowContent}
+        onClick={
+          href ? () => (window.location.href = href) : handleToggleShowContent
+        }
         role="button"
         aria-label="Botón para ver más información"
       >
