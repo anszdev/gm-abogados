@@ -1,0 +1,13 @@
+---
+import Section from "@common/Section.astro";
+import SectionTitle from "@common/SectionTitle.astro";
+import Container from "@common/Container.astro";
+import { ReviewsContainer } from "./ReviewsContainer";
+---
+
+<Section background="primary">
+  <Container>
+    <SectionTitle align="center">Nuestros Clientes lo Confirman</SectionTitle>
+    <ReviewsContainer client:visible />
+  </Container>
+</Section>
