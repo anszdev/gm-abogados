@@ -19,20 +19,24 @@ import Button from "../common/Button.astro";
     </header>
     <div class="gm_info_content">
       <article class="gm_info-card">
+        <div class="gm_info-card-pulse"></div>
         <span><Ban /></span>
         <p>
           <strong>NO</strong> firmes renuncia, <strong>NO</strong> firmes finiquito.
         </p>
       </article>
       <article class="gm_info-card">
+        <div class="gm_info-card-pulse"></div>
         <span><Call /></span>
         <p>Asesórate con nosotros, somos especialistas.</p>
       </article>
       <article class="gm_info-card">
+        <div class="gm_info-card-pulse"></div>
         <span><Money /></span>
         <p>Los honorarios se pagan hasta que cobras.</p>
       </article>
       <article class="gm_info-card">
+        <div class="gm_info-card-pulse"></div>
         <span><Clock /></span>
         <p>Recuerda... Solo tienes 2 meses para actuar.</p>
       </article>
@@ -135,6 +139,7 @@ import Button from "../common/Button.astro";
     background: var(--gm-bg);
     padding: 1.2rem 0.8rem;
     border-radius: 1.5rem;
+    position: relative;
 
     @media screen and (width >= 1024px) {
       padding: 1.4rem 1.2rem;
@@ -162,6 +167,16 @@ import Button from "../common/Button.astro";
       }
     }
   }
+  .gm_info-card-pulse {
+    width: 1rem;
+    height: 1rem;
+    background: var(--gm-accent-gradient);
+    border-radius: 999px;
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    animation: pulse 1.5s infinite;
+  }
 
   .gm_info-footer {
     display: flex;
@@ -179,6 +194,18 @@ import Button from "../common/Button.astro";
     }
     100% {
       background-position: 200% 50%;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.8);
     }
   }
 </style>
