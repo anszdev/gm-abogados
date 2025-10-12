@@ -1,0 +1,44 @@
+import { useState } from "react";
+import "./Faq.css";
+import { FaqItem } from "./FaqItem";
+
+const faqs = [
+  {
+    id: "despido-sin-razon",
+    question: "¿Qué hago si me despidieron sin ninguna razón?",
+    answer:
+      "Si te despidieron sin una causa justificada, tienes derecho a elegir entre la **reinstalación** en tu puesto o una **indemnización constitucional** de tres meses de salario, además de los salarios caídos y otras prestaciones. Es crucial no firmar ningún documento sin asesoría y contactarnos lo antes posible.",
+  },
+  {
+    id: "tiempo-demanda-despido",
+    question:
+      "¿Cuánto tiempo tengo para demandar a mi patrón por despido injustificado?",
+    answer:
+      "En México, tienes un plazo de **dos meses** a partir del día siguiente a la fecha del despido para presentar tu demanda. Si dejas pasar este tiempo, la acción prescribirá y perderás tu derecho a reclamar. ¡Es fundamental actuar rápido!",
+  },
+  {
+    id: "liquidacion-finiquito",
+    question: "¿Qué es la liquidación y el finiquito? ¿Son lo mismo?",
+    answer:
+      "No son lo mismo. El **finiquito** se paga cuando la relación laboral termina por mutuo acuerdo, renuncia o finalización de contrato, e incluye vacaciones, prima vacacional y aguinaldo proporcionales. La **liquidación** se paga solo en caso de despido injustificado e incluye todo lo del finiquito más la indemnización constitucional (3 meses de salario), prima de antigüedad y salarios caídos.",
+  },
+  {
+    id: "costo-abogado-laboral",
+    question: "¿Cuánto cuesta contratarnos o cuándo debo pagar?",
+    answer:
+      "Con nosotros, tus honorarios se pagan **hasta que ganemos tu caso** y obtengas la compensación que mereces. Esto significa que no tendrás que pagar nada por adelantado, lo que te permite defender tus derechos sin preocupaciones económicas iniciales.",
+  },
+];
+
+export function FaqList() {
+  const [questionExpanded, setQuestionExpanded] = useState<string | null>(null);
+  console.log(questionExpanded);
+
+  return (
+    <div className="gm_faq-list">
+      {faqs.map(({ id, question, answer }) => (
+        <FaqItem answer={answer} question={question} key={id} name="faq" />
+      ))}
+    </div>
+  );
+}
