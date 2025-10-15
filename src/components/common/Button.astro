@@ -3,26 +3,53 @@ interface Props {
   href?: string;
   ariaLabel?: string;
   widthComplete?: boolean;
+  itsA: "link" | "button";
+  type?: "button" | "submit";
+  onclick?: string;
 }
 
 const {
   href = "#contacto",
   ariaLabel = "Contactar",
   widthComplete = false,
+  itsA = "link",
+  type = "button",
+  onclick,
 } = Astro.props;
 ---
 
-<a
-  href={href}
-  class="gm_button"
-  style={`display: ${widthComplete ? "block" : "inline-block"}`}
-  role="button"
-  aria-label={ariaLabel}
->
-  <span class="gm_button-text">
-    <slot />
-  </span>
-</a>
+{
+  itsA === "link" && (
+    <a
+      href={href}
+      class="gm_button"
+      style={`display: ${widthComplete ? "block" : "inline-block"}`}
+      role="button"
+      aria-label={ariaLabel}
+    >
+      <span class="gm_button-text">
+        <slot />
+      </span>
+    </a>
+  )
+}
+
+{
+  itsA === "button" && (
+    <button
+      class="gm_button"
+      style={`display: ${widthComplete ? "block" : "inline-block"}`}
+      role="button"
+      aria-label={ariaLabel}
+      type={type}
+      onclick={onclick}
+    >
+      <span class="gm_button-text">
+        <slot />
+      </span>
+    </button>
+  )
+}
 
 <style>
   .gm_button {
@@ -34,14 +61,19 @@ const {
     text-align: center;
     cursor: pointer;
     text-decoration: none;
+    border: none;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
 
     @media screen and (width >= 768px) {
       display: inline-block;
     }
-  }
-
-  .gm_button:active {
-    transform: scale(0.95);
   }
 
   .gm_button-text {
