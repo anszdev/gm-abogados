@@ -1,0 +1,164 @@
+---
+import Button from "@common/Button.astro";
+import Container from "@common/Container.astro";
+import Section from "@common/Section.astro";
+import SectionTitle from "@common/SectionTitle.astro";
+import Instagram from "@components/icons/Instagram.astro";
+import Facebook from "@components/icons/Facebook.astro";
+import Whatsapp from "@components/icons/Whatsapp.astro";
+import Input from "./Input.astro";
+
+import { gmLinks } from "@utils/index";
+---
+
+<Section background="primary" id="contact">
+  <Container>
+    <SectionTitle>Contáctanos</SectionTitle>
+    <p class="gm_contact-text">
+      Agenda una consulta sin costo para que analicemos tu caso. Toda la
+      información es 100% confidencial.
+    </p>
+    <div class="gm_contact-container">
+      <form action="" class="gm_contact-form">
+        <Input name="name" label="Nombre" placeholder="Su nombre" type="text" />
+        <Input
+          name="name"
+          label="Correo electrónico"
+          placeholder="correo@correo.com"
+          type="email"
+        />
+        <Input name="messagge" label="Mensaje" type="textarea" />
+
+        <div class="gm_contact-button">
+          <Button itsA="button" type="submit">Enviar mensaje</Button>
+        </div>
+      </form>
+      <aside class="gm_contact-secondary">
+        <div class="gm_contact-secondary-item">
+          <h5>Escribenos a</h5>
+          <a>iang27191@gmail.com <span></span></a>
+        </div>
+        <div class="gm_contact-secondary-item">
+          <h5>Llamanos al</h5>
+          <a>55 66011051 <span></span></a>
+        </div>
+        <div class="gm_contact-socials">
+          <a href={gmLinks.instagram} target="_blank"><Instagram /></a>
+          <a href={gmLinks.facebook} target="_blank"><Facebook /></a>
+          <a href={gmLinks.whatsapp} target="_blank"><Whatsapp /></a>
+        </div>
+      </aside>
+    </div>
+  </Container>
+</Section>
+
+<style>
+  .gm_contact-text {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-top: 1.5rem;
+
+    @media screen and (width >= 768px) {
+      max-width: 35rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  .gm_contact-container {
+    padding: 2.8rem 0;
+
+    @media screen and (width >= 1024px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12rem;
+      align-items: center;
+    }
+  }
+
+  .gm_contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+
+    input,
+    textarea {
+      display: block;
+      border: none;
+      outline: none;
+      background: transparent;
+    }
+  }
+
+  .gm_contact-button {
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+  }
+
+  .gm_contact-secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    @media screen and (width >= 1024px) {
+      margin-top: 0;
+    }
+  }
+
+  .gm_contact-secondary-item {
+    h5 {
+      font-size: 1.3rem;
+      font-family: var(--gm-family-title);
+      color: var(--gm-primary);
+      margin-bottom: 0.6rem;
+    }
+
+    a {
+      font-size: 1.2rem;
+      color: var(--gm-title-text);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+
+      span {
+        display: block;
+        width: 0.7rem;
+        height: 0.7rem;
+        background: var(--gm-accent-gradient);
+        border-radius: 999px;
+        animation: pulse 1.5s infinite;
+      }
+    }
+  }
+
+  .gm_contact-socials {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      background: var(--gm-accent-gradient);
+      padding: 0.8rem;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gm-bg-secondary);
+      box-shadow: var(--gm-button-shadow);
+      scale: 1.04;
+      transition: scale 150ms ease-in-out;
+
+      &:hover {
+        scale: 1.1;
+      }
+
+      &:active {
+        scale: 1;
+      }
+    }
+  }
+</style>
