@@ -27,6 +27,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
 figure,
 blockquote,
@@ -82,4 +83,16 @@ body {
   font-family: var(--gm-family-body);
   background-color: var(--gm-bg);
   color: var(--gm-text);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
 }

@@ -1,0 +1,49 @@
+---
+import Container from "@common/Container.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+  <Container>
+    <div class="gm_footer">
+      <img src="/gm-logo.svg" />
+
+      <p class="gm_footer-copy">
+        ©{currentYear} Diseñado y Desarrollado por <a href=""
+          >Ing. Ángel Baez</a
+        >
+        para GM Abogados Laboralistas
+      </p>
+    </div>
+  </Container>
+</footer>
+
+<style>
+  footer {
+    background: var(--gm-bg-secondary);
+  }
+
+  .gm_footer {
+    padding: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 10rem;
+    }
+  }
+
+  .gm_footer-copy {
+    font-weight: 500;
+    text-align: center;
+    text-wrap: pretty;
+
+    a {
+      font-weight: 600;
+      color: var(--gm-accent);
+      text-decoration: none;
+    }
+  }
+</style>
