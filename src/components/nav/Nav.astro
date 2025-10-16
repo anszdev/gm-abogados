@@ -1,0 +1,36 @@
+---
+import Container from "../common/Container.astro";
+import NavLinks from "./NavLinks.astro";
+import NavLogo from "./NavLogo.astro";
+import NavMenuButton from "./NavMenuButton.astro";
+---
+
+<nav
+  class="nav"
+  aria-label="Navegación principal del sitio GM Abogados Laboralistas"
+>
+  <Container>
+    <div class="nav_content">
+      <NavLogo />
+      <NavLinks />
+      <NavMenuButton />
+    </div>
+  </Container>
+</nav>
+<style>
+  .nav {
+    padding: 1.5rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+  }
+
+  .nav_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+</style>

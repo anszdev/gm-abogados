@@ -1,0 +1,13 @@
+---
+import Section from "@common/Section.astro";
+import SectionTitle from "@common/SectionTitle.astro";
+import Container from "@common/Container.astro";
+import { FaqList } from "./FaqList";
+---
+
+<Section background="primary" id="faq">
+  <Container>
+    <SectionTitle>Preguntas Frecuentes</SectionTitle>
+    <FaqList client:visible />
+  </Container>
+</Section>

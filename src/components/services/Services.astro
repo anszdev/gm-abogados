@@ -1,0 +1,81 @@
+---
+import Container from "../common/Container.astro";
+import Section from "../common/Section.astro";
+import SectionTitle from "../common/SectionTitle.astro";
+import ArrowR from "../icons/ArrowR.astro";
+import ServiceCard from "./ServiceCard.astro";
+
+const cardsData = [
+  {
+    title: "Asesoría Legal Personalizada",
+    content:
+      "Te orientamos sobre tus derechos y las mejores opciones para tu caso.",
+    icon: "",
+  },
+  {
+    title: "Representación en Juicios",
+    content:
+      "Te defendemos ante tribunales para asegurar que se respeten tus derechos.",
+    icon: "",
+  },
+  {
+    title: "Negociación con Empleadores",
+    content:
+      "Buscamos acuerdos justos que te beneficien sin tener que ir a juicio.",
+    icon: "",
+  },
+];
+---
+
+<Section id="services" background="primary">
+  <Container>
+    <div>
+      <SectionTitle align="center">Nuestros Compromisos Contigo</SectionTitle>
+      <p class="gm_services-text">
+        Nuestra estrategia legal está diseñada para defender tus derechos y
+        conseguir el resultado que buscas.
+      </p>
+    </div>
+    <main class="gm_services-cards">
+      <ServiceCard
+        cardTitle="Asesoría Legal Personalizada"
+        cardContent="Te orientamos sobre tus derechos y las mejores opciones para tu caso."
+        href="#contact"
+      />
+      <ServiceCard
+        cardTitle="Representación en Juicios"
+        cardContent="Te defendemos ante tribunales para asegurar que se respeten tus derechos."
+        href="#contact"
+      />
+      <ServiceCard
+        cardTitle="Negociación con Empleadores"
+        cardContent="Buscamos acuerdos justos que te beneficien sin tener que ir a juicio."
+        href="#contact"
+      />
+    </main>
+  </Container>
+</Section>
+
+<style>
+  .gm_services-text {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1.5rem;
+
+    @media screen and (width >= 768px) {
+      max-width: 42rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  .gm_services-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+</style>

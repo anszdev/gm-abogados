@@ -1,0 +1,99 @@
+:root {
+  --gm-primary: #1f3b5a;
+  --gm-text: #6a6a84;
+  --gm-title-text: #151515;
+  --gm-bg-secondary: #fffefe;
+  --gm-bg: #efeef2;
+  --gm-accent: #b58f4c;
+  --gm-accent-gradient: linear-gradient(to bottom, var(--gm-accent), #d9c39c);
+  --gm-primary-gradient: linear-gradient(to right, var(--gm-primary), #35597c);
+  --gm-button-shadow: box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+
+  --gm-family-title: "Merriweather Variable", serif;
+  --gm-family-body: "Inter Variable", sans-serif;
+  --gm-font-normal: 1.125rem; /* 18px */
+}
+
+/* 1. Usa un box-model más intuitivo en todos los elementos. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Elimina los márgenes por defecto. */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* 3. Permite que los porcentajes funcionen para la altura. */
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* 4. Mejora la tipografía y suavizado de fuentes. */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Facilita el trabajo con imágenes y otros medios. */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Elimina los estilos por defecto de los formularios. */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Evita desbordamientos de texto. */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: var(--gm-family-body);
+  background-color: var(--gm-bg);
+  color: var(--gm-text);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
