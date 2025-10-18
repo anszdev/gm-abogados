@@ -140,10 +140,20 @@ import { gmLinks } from "@utils/index";
 </style>
 
 <script>
+  // Toggle menu visibility on nav icon click
   const $navMenu = document.querySelector("#nav-icon");
   const $menu = document.querySelector("#menu");
   $navMenu?.addEventListener("click", () => {
     const menuIsOpen = ($navMenu as HTMLElement).classList.contains("open");
     $menu?.classList.toggle("visible", !menuIsOpen);
+  });
+
+  // Close menu on link click (for mobile)
+  const $navLinks = document.querySelectorAll(".nav-links a");
+  $navLinks.forEach(($link) => {
+    $link.addEventListener("click", () => {
+      ($navMenu as HTMLElement).classList.remove("open");
+      $menu?.classList.remove("visible");
+    });
   });
 </script>
