@@ -4,7 +4,7 @@ interface Props {
 
 export function ReviewExperence({ experenceInitial }: Props) {
   return (
-    <div className="gm_reviews-experence-container">
+    <div className="gm_reviews-experence-container reveal">
       <div className="gm_reviews-experence">
         {experenceInitial
           .map((initial) => <span key={initial}>{initial}</span>)

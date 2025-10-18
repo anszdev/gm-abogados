@@ -38,7 +38,7 @@ const REVIEWS = [
 ];
 
 const EXPERENCE_INITIAL = REVIEWS.map(({ name }) =>
-  getInitialLettersName(name)
+  getInitialLettersName(name),
 );
 
 export function ReviewsContainer() {
@@ -60,12 +60,12 @@ export function ReviewsContainer() {
 
   return (
     <div className="gm_review-container">
-      <div className="gm_review-list" ref={carruselRef}>
+      <div className="gm_review-list reveal" ref={carruselRef}>
         {REVIEWS.map(({ id, content, name }) => (
           <Review content={content} name={name} key={id} />
         ))}
       </div>
-      <div className="gm_reviews-buttons">
+      <div className="gm_reviews-buttons reveal">
         <button className="gm_reviews-button" onClick={prevCarrusel}>
           <Arrow />
         </button>

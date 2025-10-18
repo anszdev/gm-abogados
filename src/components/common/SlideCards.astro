@@ -17,7 +17,7 @@ const { cardsData = [] } = Astro.props;
 ---
 
 <div>
-  <div class="gm_slides">
+  <div class="gm_slides reveal">
     {
       cardsData.map((card) => (
         <Card
@@ -31,7 +31,7 @@ const { cardsData = [] } = Astro.props;
       ))
     }
   </div>
-  <div class="gm_slide-buttons">
+  <div class="gm_slide-buttons reveal">
     <button class="gm_slide-button" id="prev-slide"><Arrow /></button>
     <button class="gm_slide-button" id="next-slide"><ArrowR /></button>
   </div>
@@ -99,7 +99,7 @@ const { cardsData = [] } = Astro.props;
 
     if (!slideContainer || !prevButton || !nextButton || slides.length === 0) {
       console.error(
-        "No se encontraron los elementos necesarios para el carrusel."
+        "No se encontraron los elementos necesarios para el carrusel.",
       );
       return;
     }

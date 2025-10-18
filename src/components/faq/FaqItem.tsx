@@ -6,7 +6,7 @@ interface Props {
 
 export function FaqItem({ answer, question, name }: Props) {
   return (
-    <details name={name} className="gm_faq-item">
+    <details name={name} className="gm_faq-item reveal">
       <summary>
         {question}
         <span aria-label="expander o contraer">

@@ -9,7 +9,7 @@ export function Review({ content, name }: Props) {
   const initialLetters = getInitialLettersName(name);
 
   return (
-    <article className="gm_review">
+    <article className="gm_review reveal">
       <span className="gm_review-header-quote">
         <svg
           xmlns="http://www.w3.org/2000/svg"

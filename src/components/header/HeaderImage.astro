@@ -4,11 +4,13 @@
       src="/gm-logo.svg"
       class="gm_header-image-logo"
       alt="Logo de GM Abogados Laboralistas"
+      loading="lazy"
     />
     <img
       src="/images/profile.webp"
       alt="Lic. Jonathan Ian González Mora - Abogado"
       class="gm_header-image-svg"
+      loading="lazy"
     />
   </div>
 </div>
@@ -28,6 +30,9 @@
     background-size: cover;
     flex: 1.2;
     z-index: -1;
+
+    animation: reveal 400ms ease-in-out;
+    animation-delay: 100ms;
   }
 
   .gm_header-image-logo {

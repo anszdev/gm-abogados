@@ -6,7 +6,9 @@ interface Props {
 const { align = "left" } = Astro.props;
 ---
 
-<h2 class={`gm_section-title ${align === "center" ? "text-center" : ""}`}>
+<h2
+  class={`gm_section-title reveal ${align === "center" ? "text-center" : ""}`}
+>
   <slot />
 </h2>
 <style>
