@@ -89,7 +89,7 @@ body {
 .reveal {
   animation: reveal linear both;
   animation-timeline: view();
-  animation-range: entry 20% cover 40%;
+  animation-range: entry 20% cover 30%;
 }
 
 @keyframes pulse {
