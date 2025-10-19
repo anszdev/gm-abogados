@@ -36,11 +36,13 @@ import { gmLinks } from "@utils/index";
       <aside class="gm_contact-secondary reveal">
         <div class="gm_contact-secondary-item">
           <h5>Escribenos a</h5>
-          <a>iang27191@gmail.com <span></span></a>
+          <a href="mailto:iang27191@gmail.com"
+            >iang27191@gmail.com <span></span></a
+          >
         </div>
         <div class="gm_contact-secondary-item">
           <h5>Llamanos al</h5>
-          <a>55 66011051 <span></span></a>
+          <a href="tel:+525566011051">55 66011051 <span></span></a>
         </div>
         <div class="gm_contact-socials">
           <a href={gmLinks.instagram} target="_blank"><Instagram /></a>
@@ -124,6 +126,7 @@ import { gmLinks } from "@utils/index";
       align-items: center;
       gap: 1rem;
       cursor: pointer;
+      text-decoration: none;
 
       span {
         display: block;

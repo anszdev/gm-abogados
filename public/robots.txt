@@ -1,0 +1,6 @@
+# Permitir a todos los buscadores rastrear todo el sitio
+User-agent: *
+Allow: /
+
+# Ubicación del sitemap
+Sitemap: https://gm-abogados.netlify.app/sitemap-index.xml
