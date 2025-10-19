@@ -35,19 +35,34 @@ import { gmLinks } from "@utils/index";
       </form>
       <aside class="gm_contact-secondary reveal">
         <div class="gm_contact-secondary-item">
-          <h5>Escribenos a</h5>
+          <p>Escribenos a</p>
           <a href="mailto:iang27191@gmail.com"
             >iang27191@gmail.com <span></span></a
           >
         </div>
         <div class="gm_contact-secondary-item">
-          <h5>Llamanos al</h5>
+          <p>Llamanos al</p>
           <a href="tel:+525566011051">55 66011051 <span></span></a>
         </div>
         <div class="gm_contact-socials">
-          <a href={gmLinks.instagram} target="_blank"><Instagram /></a>
-          <a href={gmLinks.facebook} target="_blank"><Facebook /></a>
-          <a href={gmLinks.whatsapp} target="_blank"><Whatsapp /></a>
+          <a
+            href={gmLinks.instagram}
+            target="_blank"
+            name="Link para ir al Instagram del Lic. Gonzalez Mora"
+            ><Instagram /></a
+          >
+          <a
+            href={gmLinks.facebook}
+            target="_blank"
+            name="Link para ir Facebook al del Lic. Gonzalez Mora"
+            ><Facebook /></a
+          >
+          <a
+            href={gmLinks.whatsapp}
+            target="_blank"
+            name="Link para ir al Whatsapp del Lic. Gonzalez Mora"
+            ><Whatsapp /></a
+          >
         </div>
       </aside>
     </div>
@@ -111,7 +126,7 @@ import { gmLinks } from "@utils/index";
   }
 
   .gm_contact-secondary-item {
-    h5 {
+    p {
       font-size: 1.3rem;
       font-family: var(--gm-family-title);
       color: var(--gm-primary);
