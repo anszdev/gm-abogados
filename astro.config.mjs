@@ -5,6 +5,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://gm-abogados.netlify.app/",
+  site: "https://gm-abogados.com.mx/",
   integrations: [react(), sitemap()],
 });
