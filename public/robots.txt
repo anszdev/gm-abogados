@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Ubicación del sitemap
-Sitemap: https://gm-abogados.netlify.app/sitemap-index.xml
+Sitemap: https://gm-abogados.com.mx/sitemap-index.xml
