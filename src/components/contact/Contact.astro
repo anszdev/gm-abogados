@@ -1,14 +1,13 @@
 ---
-import Button from "@common/Button.astro";
 import Container from "@common/Container.astro";
 import Section from "@common/Section.astro";
 import SectionTitle from "@common/SectionTitle.astro";
 import Instagram from "@components/icons/Instagram.astro";
 import Facebook from "@components/icons/Facebook.astro";
 import Whatsapp from "@components/icons/Whatsapp.astro";
-import Input from "./Input.astro";
 
 import { gmLinks } from "@utils/index";
+import { ContactForm } from "./ContactForm";
 ---
 
 <Section background="primary" id="contact">
@@ -19,20 +18,8 @@ import { gmLinks } from "@utils/index";
       información es 100% confidencial.
     </p>
     <div class="gm_contact-container">
-      <form action="" class="gm_contact-form reveal">
-        <Input name="name" label="Nombre" placeholder="Su nombre" type="text" />
-        <Input
-          name="name"
-          label="Correo electrónico"
-          placeholder="correo@correo.com"
-          type="email"
-        />
-        <Input name="messagge" label="Mensaje" type="textarea" />
+      <ContactForm client:visible />
 
-        <div class="gm_contact-button">
-          <Button itsA="button" type="submit">Enviar mensaje</Button>
-        </div>
-      </form>
       <aside class="gm_contact-secondary reveal">
         <div class="gm_contact-secondary-item">
           <p>Escribenos a</p>
@@ -92,26 +79,6 @@ import { gmLinks } from "@utils/index";
       gap: 12rem;
       align-items: center;
     }
-  }
-
-  .gm_contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
-
-    input,
-    textarea {
-      display: block;
-      border: none;
-      outline: none;
-      background: transparent;
-    }
-  }
-
-  .gm_contact-button {
-    display: flex;
-    justify-content: end;
-    margin-top: 1rem;
   }
 
   .gm_contact-secondary {
