@@ -1,6 +1,5 @@
-import { useState } from "react";
-import "./Faq.css";
-import { FaqItem } from "./FaqItem";
+---
+import FaqItem from "./FaqItem.astro";
 
 const faqs = [
   {
@@ -29,16 +28,25 @@ const faqs = [
       "Con nosotros, tus honorarios se pagan **hasta que ganemos tu caso** y obtengas la compensación que mereces. Esto significa que no tendrás que pagar nada por adelantado, lo que te permite defender tus derechos sin preocupaciones económicas iniciales.",
   },
 ];
+---
 
-export function FaqList() {
-  const [questionExpanded, setQuestionExpanded] = useState<string | null>(null);
-  console.log(questionExpanded);
+<div class="gm_faq-list">
+  {
+    faqs.map(({ question, answer }) => (
+      <FaqItem answer={answer} question={question} name="faq" />
+    ))
+  }
+</div>
 
-  return (
-    <div className="gm_faq-list">
-      {faqs.map(({ id, question, answer }) => (
-        <FaqItem answer={answer} question={question} key={id} name="faq" />
-      ))}
-    </div>
-  );
-}
+<style>
+  :root {
+    interpolate-size: allow-keywords;
+  }
+
+  .gm_faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 4rem;
+  }
+</style>

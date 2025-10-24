@@ -1,0 +1,98 @@
+---
+interface Props {
+  question: string;
+  answer: string;
+  name?: string;
+}
+
+const { question, answer, name = "faq" } = Astro.props;
+---
+
+<details name={name} class="gm_faq-item reveal">
+  <summary>
+    {question}
+    <span aria-label="expander o contraer">
+      <svg
+        id="open-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="34"
+        height="34"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-plus"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 5l0 14"></path>
+        <path d="M5 12l14 0"></path>
+      </svg>
+    </span>
+  </summary>
+  <p>{answer}</p>
+</details>
+
+<style>
+  .gm_faq-item {
+    background: var(--gm-bg-secondary);
+    border-radius: 1.2rem;
+    transition: scale 300ms linear;
+    overflow: clip;
+
+    &[open] summary span {
+      transform: rotate(45deg);
+      color: var(--gm-accent);
+    }
+
+    &[open] {
+      &::details-content {
+        height: auto;
+      }
+    }
+
+    summary {
+      font-size: 1.2rem;
+      padding: 1.4rem 1.6rem;
+      color: var(--gm-title-text);
+      font-weight: 600;
+      display: grid;
+      grid-template-columns: 1fr 2rem;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      gap: 1rem;
+
+      span {
+        transition-property: transform color;
+        transition-duration: 200ms;
+        transition-timing-function: ease-in-out;
+      }
+
+      @media screen and (width >= 1024px) {
+        font-size: 1.4rem;
+        padding: 2rem 2.4rem;
+      }
+    }
+
+    p {
+      padding: 0 1.6rem 1.4rem 1.6rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+
+      @media screen and (width >= 1024px) {
+        max-width: 70%;
+        padding: 0 2.4rem 2rem 2.4rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .gm_faq-item::details-content {
+    height: 0;
+    transition:
+      height 300ms linear,
+      content-visibility 300ms allow-discrete;
+  }
+</style>

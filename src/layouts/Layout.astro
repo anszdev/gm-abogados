@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/merriweather";
+import { Toaster } from "react-hot-toast";
 ---
 
 <!doctype html>
@@ -10,19 +11,25 @@ import "@fontsource-variable/merriweather";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href="https://gm-abogados.com.mx/" />
+    <link rel="canonical" href="https://gm-abogados.com.mx" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="apple-touch-icon" href="/gm-logo.jpg" />
+    <meta name="theme-color" content="#1f3b5a" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="description"
-      content="GM Abogados Laboralistas, especialistas en despido injustificado. Asesoría legal experta para proteger tus derechos laborales. Contacta a nuestros abogados hoy."
+      content="Abogados laboralistas expertos en casos de despido injustificado en México. ✓ Consulta Gratuita ✓ Más de 150 casos de experiencia ✓ Especialistas en derecho laboral. Protegemos tus derechos laborales con resultados comprobados."
     />
     <meta
       name="keywords"
-      content="abogado laboral, despido injustificado, asesoría legal laboral, derechos laborales, abogado especialista en despidos, defensa laboral, consultoría legal laboral, representación legal en despidos, GM Abogados Laboralistas, abogado laboral en Ciudad de México"
+      content="despido injustificado méxico, abogado laboral cdmx, derechos trabajadores, indemnización laboral, demanda laboral, asesoría legal trabajo, finiquito laboral, liquidación trabajo, calculadora liquidación, abogado despidos, consultoría laboral, representación legal trabajo, juicios laborales, protección derechos laborales, GM Abogados Laboralistas, abogado laboralista méxico"
     />
-    <meta name="author" content="Ing. Ángel Baez" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="Spanish" />
+    <meta name="author" content="Lic. Jonathan Ian González Mora" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="language" content="es-MX" />
     <meta name="geo.region" content="MX" />
     <meta name="geo.placename" content="Mexico" />
     <meta name="rating" content="general" />
@@ -38,14 +45,125 @@ import "@fontsource-variable/merriweather";
     />
     <meta
       property="og:image"
-      content="https:https://gm-abogados.com.mx/gm-logo.jpg"
+      content="https://gm-abogados.com.mx/gm-logo.jpg"
     />
+    <meta
+      property="og:title"
+      content="GM Abogados Laboralistas - Abogado Laboral especialista en Despido Injustificado"
+    />
+    <meta property="og:site_name" content="GM Abogados Laboralistas" />
     <title>
       GM Abogados Laboralistas - Abogado Laboral especialista en Despido
       Injustificado
     </title>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="GM Abogados Laboralistas - Especialistas en Derecho Laboral"
+    />
+    <meta
+      name="twitter:description"
+      content="Expertos en casos de despido injustificado y derechos laborales en México. Consulta gratuita con abogados especializados."
+    />
+    <meta
+      name="twitter:image"
+      content="https://gm-abogados.com.mx/gm-logo.jpg"
+    />
+
+    <!-- Schema.org para Bufete de Abogados -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "GM Abogados Laboralistas",
+        "image": "https://gm-abogados.com.mx/gm-logo.jpg",
+        "description": "Especialistas en derecho laboral y casos de despido injustificado en México. Asesoría legal experta para proteger tus derechos laborales.",
+        "url": "https://gm-abogados.com.mx",
+        "telephone": "+52-55-6601-1051",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ciudad de México",
+          "addressRegion": "CDMX",
+          "addressCountry": "MX"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "XX.XXXXX",
+          "longitude": "-XX.XXXXX"
+        },
+        "sameAs": [
+          "https://www.facebook.com/GMAbogadosLaboralistas",
+          "https://www.linkedin.com/company/gm-abogados-laboralistas"
+        ],
+        "priceRange": "$$",
+        "servesCuisine": "Derecho Laboral",
+        "areaServed": "Ciudad de México",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios Legales Laborales",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Casos de Despido Injustificado",
+                "description": "Representación legal en casos de despido injustificado y negociación de liquidaciones"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Asesoría Laboral",
+                "description": "Consultoría y asesoría en derechos laborales y relaciones laborales"
+              }
+            }
+          ]
+        }
+      }
+    </script>
+
+    <!-- Schema.org para Professional Service -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "GM Abogados Laboralistas",
+        "@id": "https://gm-abogados.com.mx",
+        "founder": {
+          "@type": "Person",
+          "name": "Jonathan Ian González Mora",
+          "jobTitle": "Abogado Laboralista"
+        },
+        "description": "Bufete de abogados especializado en derecho laboral, con enfoque en casos de despido injustificado y protección de derechos laborales.",
+        "knowsAbout": [
+          "Derecho Laboral",
+          "Despido Injustificado",
+          "Negociación de Liquidaciones",
+          "Derechos Laborales",
+          "Asesoría Legal Laboral"
+        ]
+      }
+    </script>
   </head>
   <body>
     <slot />
+    <Toaster client:only />
   </body>
 </html>
