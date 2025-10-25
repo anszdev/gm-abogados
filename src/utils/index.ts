@@ -53,13 +53,13 @@ export const generateContactEmail = (
             De: ${name}
           </p>
           <p
-            style="margin-top: 1rem; font-size: 18px; color: #444; font-weight: bold;"
+            style="margin-top: .5rem; font-size: 18px; color: #444; font-weight: bold;"
           >
             Correo: <span style="text-transform: lowercase;">${email}</span>
  
           </p>
           <p
-            style="margin-top: 1rem; font-size: 18px; color: #444; font-weight: bold; text-transform: capitalize;"
+            style="margin-top: .5rem; font-size: 18px; color: #444; font-weight: bold; text-transform: capitalize;"
           >
             Teléfono: ${phone}
           </p>
@@ -75,7 +75,7 @@ export const generateContactEmail = (
             style="display: flex; gap: 15px; margin-top: 2rem;"
           >
             <a
-              href="mailto:${email}?subject=Hola ${name},%0D%0A%0D%0AGracias por contactar a GM Abogados Laboralistas"
+              href="mailto:${email}"
               style="padding: 12px 24px; border-radius: 9999px; background: linear-gradient(to right, #2b4d6e, #35597c); box-shadow: 0 0.4em 1em rgba(0,0,0,0.1); color: #ffffff; font-size: 1.125rem; font-weight: 500; text-align: center; text-decoration: none; display: inline-block; margin-right: 10px;"
             >
               Correo
