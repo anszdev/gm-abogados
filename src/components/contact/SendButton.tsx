@@ -6,7 +6,7 @@ export function SendButton() {
       aria-label="Enviar mensaje a través del formulario de contacto"
       type="submit"
     >
-      <span className="gm_button-text">Enviar mensaje</span>
+      <span className="gm_button-text">Enviar Consulta Gratuita</span>
     </button>
   );
 }

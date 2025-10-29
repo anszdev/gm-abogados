@@ -31,7 +31,7 @@ const { question, answer, name = "faq" } = Astro.props;
       </svg>
     </span>
   </summary>
-  <p>{answer}</p>
+  <p set:html={answer} />
 </details>
 
 <style>

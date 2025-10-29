@@ -7,44 +7,47 @@ import SlidesCards from "@common/SlideCards.astro";
 
 const cardsData = [
   {
-    title: "Despido injustificado sin liquidación",
+    title: "Me Despidieron Sin Finiquito ni Liquidación",
     content:
-      "El empleador termina la relación laboral sin causa legal y sin pagar las indemnizaciones y prestaciones obligatorias al trabajador.",
+      "Si te corrieron sin pagar tu liquidación, aguinaldo, vacaciones o finiquito, tienes derecho a reclamar hasta 20 meses de salario. No importa si firmaste tu renuncia: podemos ayudarte a recuperar lo que te corresponde por ley.",
     icon: "/images/document-dismiss.svg",
-    tags: ["ART. 48"],
+    tags: ["ART. 48", "ART. 50", "3 Meses de Salario"],
   },
   {
-    title: "Acoso Laboral o Discriminación",
+    title: "Sufro Acoso Laboral, Hostigamiento o Discriminación",
     content:
-      "Cualquier trato hostil, intimidatorio o diferencia de trato injustificada en el trabajo, basada en características personales, que afecte la dignidad o cree un ambiente ofensivo.",
+      "¿Te humillan, acosan sexualmente o discriminan por tu género, edad, embarazo u orientación sexual? Esto es ilegal. Puedes demandar indemnización adicional por daño moral y obligar a tu patrón a cesar el abuso.",
     icon: "/images/emoji-sad.svg",
-    tags: ["ART. 3o. Bis", "ART. 133"],
+    tags: ["ART. 3° Bis", "ART. 133", "Daño Moral"],
   },
   {
-    title: "Falta de Pago de Horas Extras o Prestaciones",
+    title: "No Me Pagan Horas Extras ni Mis Prestaciones",
     content:
-      "El empleador no paga el tiempo trabajado fuera de la jornada legal (horas extras) o no entrega las prestaciones obligatorias por ley, como aguinaldo, vacaciones o prima vacacional.",
+      "¿Trabajas más de 8 horas sin que te paguen doble o triple? ¿No te dieron aguinaldo, vacaciones o prima vacacional? Puedes reclamar hasta 2 años atrás de prestaciones no pagadas, más indemnización.",
     icon: "/images/money.svg",
-    tags: ["ART. 67", "ART. 68"],
+    tags: ["ART. 67", "ART. 68", "Pago Retroactivo"],
   },
   {
-    title: "Problemas con tu Contrato o Salario",
+    title: "Mi Salario Está Mal o No Tengo Contrato",
     content:
-      "Cuando tu contrato no está por escrito, incluye cláusulas ilegales que renuncian a tus derechos, o tu salario se paga incompleto, con retraso o es inferior al mínimo legal.",
+      "¿Tu patrón te paga menos del mínimo, con retraso o te hace firmar contratos ilegales? ¿No tienes contrato por escrito? Tienes derecho a salarios caídos, prestaciones completas y corrección de tu relación laboral.",
     icon: "/images/contract.svg",
-    tags: ["ART. 25", "ART. 110"],
+    tags: ["ART. 25", "ART. 110", "Salarios Caídos"],
   },
   {
-    title: "Accidentes en el trabajo",
+    title: "Tuve un Accidente o Enfermedad en el Trabajo",
     content:
-      "Lesiones o enfermedades sufridas por el trabajador a causa o con motivo de su trabajo, que pueden generar incapacidad temporal, permanente o la muerte.",
+      "Si te lesionaste en tu trabajo o desarrollaste una enfermedad laboral, además de la atención del IMSS, puedes reclamar indemnización adicional si hubo negligencia del patrón. Cubre gastos médicos, pérdida de ingresos e incapacidad.",
     icon: "/images/doctor.svg",
-    tags: ["ART. 473", "ART. 487"],
+    tags: ["ART. 473", "ART. 487", "Riesgo de Trabajo"],
   },
   {
-    title: "¿Tu situación es distinta? Cuéntanos tu caso.",
+    title: "Mi Caso Es Diferente - ¿Me Pueden Ayudar?",
+    content:
+      "Cada situación laboral es única. Cuéntanos tu caso en una consulta gratuita de 30 minutos y te diremos si tienes derecho a demandar.",
     icon: "/images/handshake.svg",
-    href: "#contacto",
+    href: "#contact",
+    tags: ["Consulta Gratis", "Sin Compromiso"],
   },
 ];
 ---
@@ -54,17 +57,20 @@ const cardsData = [
     <div class="gm_problems-content">
       <div>
         <SectionTitle>
-          ¿Te Identificas con alguna de estas situaciones?
+          Problemas Laborales Más Comunes en CDMX ¿Te Pasó Esto?
         </SectionTitle>
       </div>
       <div class="gm_problems-text reveal">
         <p class="gm_section-text">
-          Sabemos que el ambiente laboral puede ser injusto. Si enfrentas alguna
-          de estas situaciones, no estás solo. No permitas que la incertidumbre
-          te gane.
+          Si tu empleador violó tus derechos laborales en CDMX, tienes derecho a
+          una indemnización. Hemos recuperado millones de pesos para
+          trabajadores como tú. Identifica tu caso y descubre cuánto puedes
+          recuperar sin arriesgar ni un peso.
         </p>
         <div class="gm_section-button reveal">
-          <Button itsA="link" href="#contact">Obtén Asesoría Ahora</Button>
+          <Button itsA="link" href="#contact">
+            Evalúa Tu Caso Gratis - Sin Compromiso
+          </Button>
         </div>
       </div>
     </div>

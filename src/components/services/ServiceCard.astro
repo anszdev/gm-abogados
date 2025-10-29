@@ -5,12 +5,17 @@ interface Props {
   cardTitle: string;
   cardContent: string;
   href: string;
+  cta?: string;
 }
 
-const { cardTitle, cardContent, href } = Astro.props;
+const { cardTitle, cardContent, href, cta } = Astro.props;
 ---
 
-<a class="gm_services-card reveal" href={href}>
+<a
+  class="gm_services-card reveal"
+  href={href}
+  aria-label={cta ? cta : cardTitle}
+>
   <header class="gm_services-card-header">
     <div class="gm_services-card-header-title">
       <img src="/gm-logo.svg" alt="Logo de GM Abogados Laboralistas" />
@@ -49,6 +54,7 @@ const { cardTitle, cardContent, href } = Astro.props;
 
       @media screen and (width >= 768px) {
         font-size: 1.4rem;
+        max-width: 70%;
       }
     }
   }
