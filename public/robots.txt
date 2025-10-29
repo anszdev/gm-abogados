@@ -10,4 +10,4 @@ Disallow: /_astro/
 Disallow: /*.json$
 
 # Sitemap
-Sitemap: https://gm-abogados.com.mx/sitemap.xml
+Sitemap: https://gm-abogados.com.mx/sitemap-0.xml
