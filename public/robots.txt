@@ -1,6 +1,13 @@
-# Permitir a todos los buscadores rastrear todo el sitio
+# https://gm-abogados.com.mx/robots.txt
+
 User-agent: *
 Allow: /
 
-# Ubicación del sitemap
-Sitemap: https://gm-abogados.com.mx/sitemap-index.xml
+# Bloquear archivos innecesarios
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_astro/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://gm-abogados.com.mx/sitemap.xml
