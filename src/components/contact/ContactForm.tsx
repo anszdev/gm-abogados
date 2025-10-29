@@ -23,7 +23,7 @@ export function ContactForm() {
       />
       <FormInput
         name="phone"
-        label="Teléfono"
+        label="Teléfono / WhatsApp"
         placeholder="55-0000-0000"
         type="tel"
       />

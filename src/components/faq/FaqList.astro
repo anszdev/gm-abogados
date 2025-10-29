@@ -3,39 +3,183 @@ import FaqItem from "./FaqItem.astro";
 
 const faqs = [
   {
-    id: "despido-sin-razon",
-    question: "¿Qué hago si me despidieron sin ninguna razón?",
-    answer:
-      "Si te despidieron sin una causa justificada, tienes derecho a elegir entre la **reinstalación** en tu puesto o una **indemnización constitucional** de tres meses de salario, además de los salarios caídos y otras prestaciones. Es crucial no firmar ningún documento sin asesoría y contactarnos lo antes posible.",
+    id: "despido-sin-liquidacion-que-hacer",
+    question: "¿Me despidieron sin liquidación, qué hago?",
+    answer: `Si te despidieron sin pagarte liquidación, finiquito o prestaciones, <strong>NO firmes ningún documento</strong> (ni renuncia ni finiquito) sin asesoría legal.
+    
+Tienes derecho a reclamar:
+• <strong>3 meses de salario</strong> (indemnización constitucional)
+• <strong>20 días de salario por cada año trabajado</strong> (prima de antigüedad)
+• <strong>Aguinaldo, vacaciones y prima vacacional</strong> proporcionales
+• <strong>Salarios caídos</strong> desde el despido hasta la resolución
+
+⚠️ <strong>Importante:</strong> Solo tienes 2 meses para demandar. <a href="#contact">Agenda una consulta gratis ahora</a> y recupera lo que te corresponde.`,
+    category: "Despido",
   },
   {
-    id: "tiempo-demanda-despido",
-    question:
-      "¿Cuánto tiempo tengo para demandar a mi patrón por despido injustificado?",
-    answer:
-      "En México, tienes un plazo de **dos meses** a partir del día siguiente a la fecha del despido para presentar tu demanda. Si dejas pasar este tiempo, la acción prescribirá y perderás tu derecho a reclamar. ¡Es fundamental actuar rápido!",
+    id: "cuanto-tiempo-demandar-despido",
+    question: "¿Cuánto tiempo tengo para demandar por despido injustificado?",
+    answer: `Tienes <strong>solo 2 meses (60 días naturales)</strong> contados desde el día siguiente a tu despido para presentar tu demanda laboral ante la Junta de Conciliación.
+    
+<strong>⏰ ¿Qué pasa si se vence el plazo?</strong>
+Pierdes tu derecho legal a reclamar tu liquidación, indemnización y prestaciones. No hay excepciones ni prórrogas.
+
+<strong>🚨 Ya pasó más de 1 mes:</strong> Agenda una <a href="#contact">consulta de emergencia gratuita</a> hoy mismo. Aún estás a tiempo.`,
+    category: "Plazos",
   },
   {
-    id: "liquidacion-finiquito",
-    question: "¿Qué es la liquidación y el finiquito? ¿Son lo mismo?",
-    answer:
-      "No son lo mismo. El **finiquito** se paga cuando la relación laboral termina por mutuo acuerdo, renuncia o finalización de contrato, e incluye vacaciones, prima vacacional y aguinaldo proporcionales. La **liquidación** se paga solo en caso de despido injustificado e incluye todo lo del finiquito más la indemnización constitucional (3 meses de salario), prima de antigüedad y salarios caídos.",
+    id: "liquidacion-vs-finiquito-diferencia",
+    question: "¿Cuál es la diferencia entre liquidación y finiquito?",
+    answer: `<strong>FINIQUITO:</strong> Se paga cuando renuncias voluntariamente o termina tu contrato. Incluye:
+• Aguinaldo proporcional
+• Vacaciones no disfrutadas
+• Prima vacacional
+• Salarios pendientes
+
+<strong>LIQUIDACIÓN:</strong> Se paga SOLO en despido injustificado. Incluye TODO lo del finiquito MÁS:
+• 3 meses de salario (indemnización)
+• 20 días de salario por año trabajado
+• Salarios caídos
+
+<strong>💡 Ejemplo real:</strong> Si ganabas $10,000 al mes y trabajaste 5 años:
+• Finiquito: ~$15,000
+• Liquidación: <strong>~$80,000 - $150,000</strong>
+
+<a href="#contact">Calcula tu liquidación gratis aquí</a>.`,
+    category: "Liquidación",
   },
   {
-    id: "costo-abogado-laboral",
-    question: "¿Cuánto cuesta contratarnos o cuándo debo pagar?",
-    answer:
-      "Con nosotros, tus honorarios se pagan **hasta que ganemos tu caso** y obtengas la compensación que mereces. Esto significa que no tendrás que pagar nada por adelantado, lo que te permite defender tus derechos sin preocupaciones económicas iniciales.",
+    id: "cuanto-cuesta-abogado-laboral",
+    question: "¿Cuánto cuesta un abogado laboralista? ¿Cuándo tengo que pagar?",
+    answer: `<strong>Con nosotros: $0 pesos por adelantado.</strong>
+
+Trabajamos bajo el modelo de <strong>"éxito compartido":</strong>
+✅ <strong>Consulta inicial:</strong> 100% GRATIS
+✅ <strong>Presentación de demanda:</strong> SIN COSTO
+✅ <strong>Seguimiento del caso:</strong> SIN ANTICIPO
+✅ <strong>Honorarios:</strong> Solo cobramos un % SI ganamos
+
+<strong>Si no recuperas dinero, no pagas nada.</strong> Así de simple.
+
+No pagas:
+• Costas judiciales iniciales
+• Peritajes
+• Trámites administrativos
+• Asesorías durante el proceso
+
+<a href="#contact">Agenda tu consulta gratis y sin compromiso</a>.`,
+    category: "Costos",
+  },
+  {
+    id: "firme-renuncia-puedo-demandar",
+    question: "Ya firmé mi renuncia o finiquito, ¿aún puedo demandar?",
+    answer: `<strong>SÍ, en muchos casos aún puedes demandar</strong>, incluso si firmaste.
+
+La Suprema Corte ha establecido que firmar bajo:
+• Presión o amenazas
+• Falta de información clara
+• Montos incorrectos o incompletos
+• Engaño ("firma esto y luego te pagamos")
+
+<strong>NO elimina tu derecho a demandar.</strong>
+
+Hemos ganado +150 casos donde el trabajador había firmado documentos. Lo importante es:
+1. <strong>No esperar más tiempo</strong> (tienes 2 meses)
+2. <strong>Traer el documento firmado</strong> a consulta
+3. <strong>Explicar las circunstancias</strong> de la firma
+
+<a href="#contact">Consulta gratis: Evaluamos si tu firma es válida</a>.`,
+    category: "Objeciones",
+  },
+  {
+    id: "cuanto-tarda-demanda-laboral",
+    question: "¿Cuánto tiempo tarda un juicio laboral en México?",
+    answer: `Depende de la vía que elijamos:
+
+<strong>1. Conciliación (recomendado si es viable):</strong>
+⏱️ 1-3 meses promedio
+💰 Cobras más rápido
+✅ Menor desgaste
+
+<strong>2. Juicio tradicional:</strong>
+⏱️ 6-18 meses promedio
+💰 Posibilidad de mayor indemnización
+⚖️ Sentencia judicial
+
+<strong>¿Cuál es mejor para ti?</strong>
+En la consulta gratis evaluamos tu caso y te recomendamos la mejor estrategia según:
+• Urgencia económica
+• Fortaleza de tu caso
+• Actitud del empleador
+
+<a href="#contact">Agenda consulta y conoce tu mejor opción</a>.`,
+    category: "Proceso",
+  },
+  {
+    id: "cuanto-me-toca-por-despido",
+    question: "¿Cuánto dinero me corresponde por despido injustificado?",
+    answer: `Tu liquidación depende de tu salario y antigüedad. <strong>Fórmula básica:</strong>
+
+<strong>Conceptos obligatorios:</strong>
+• 3 meses de salario (indemnización constitucional)
+• 20 días de salario × años trabajados (prima de antigüedad)
+• Aguinaldo proporcional
+• Vacaciones no disfrutadas + prima vacacional
+• Salarios caídos (desde despido hasta pago)
+
+<strong>📊 Ejemplos reales:</strong>
+
+<strong>Caso 1:</strong> Salario $8,000/mes, 2 años trabajados
+= <strong>~$50,000 - $80,000</strong>
+
+<strong>Caso 2:</strong> Salario $15,000/mes, 5 años trabajados
+= <strong>~$120,000 - $200,000</strong>
+
+<strong>Caso 3:</strong> Salario $25,000/mes, 10 años trabajados
+= <strong>~$350,000 - $500,000</strong>
+
+<a href="#contact">Calcula GRATIS tu liquidación exacta aquí</a>.`,
+    category: "Montos",
+  },
+  {
+    id: "documentos-necesarios-demanda",
+    question: "¿Qué documentos necesito para demandar?",
+    answer: `<strong>Documentos básicos (si los tienes):</strong>
+✅ Contrato de trabajo
+✅ Últimos recibos de nómina
+✅ Avisos de IMSS o comprobantes de afiliación
+✅ Identificación oficial
+✅ Finiquito o carta de despido (si te dieron)
+
+<strong>⚠️ ¿No tienes documentos?</strong>
+<strong>¡No hay problema!</strong> Podemos demandar igual.
+
+Nosotros solicitamos a la autoridad:
+• Movimientos afiliatorios del IMSS
+• Registro patronal
+• Comprobantes de salario
+
+<strong>No tener papeles NO impide que demandes.</strong>
+
+<a href="#contact">Consulta gratis: Evaluamos tu caso con o sin documentos</a>.`,
+    category: "Requisitos",
   },
 ];
 ---
 
 <div class="gm_faq-list">
   {
-    faqs.map(({ question, answer }) => (
-      <FaqItem answer={answer} question={question} name="faq" />
+    faqs.map(({ question, answer }, index) => (
+      <div class={index >= 4 ? "hidden-faq" : ""}>
+        <FaqItem answer={answer} question={question} name="faq" />
+      </div>
     ))
   }
+  <div class="gm_faq-more-button-container">
+    <button id="showMoreFaq" class="gm_faq-more-button">
+      Ver más preguntas frecuentes
+    </button>
+  </div>
 </div>
 
 <style>
@@ -49,4 +193,66 @@ const faqs = [
     gap: 1rem;
     margin-top: 4rem;
   }
+
+  .hidden-faq {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .hidden-faq.show {
+    display: block;
+    opacity: 1;
+  }
+
+  .gm_faq-more-button-container {
+    display: flex;
+    justify-content: end;
+    margin-top: 2rem;
+  }
+
+  .gm_faq-more-button {
+    border: none;
+    background: none;
+    color: var(--gm-accent);
+    font-weight: 500;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .gm_faq-more-button:hover {
+    opacity: 0.8;
+  }
 </style>
+
+<script>
+  // Esperamos a que el DOM esté completamente cargado
+  document.addEventListener("DOMContentLoaded", () => {
+    const showMoreButton = document.getElementById("showMoreFaq");
+    const hiddenFaqs = document.querySelectorAll(".hidden-faq");
+    let isExpanded = false;
+
+    if (showMoreButton && hiddenFaqs.length > 0) {
+      showMoreButton.addEventListener("click", () => {
+        isExpanded = !isExpanded;
+
+        hiddenFaqs.forEach((faq) => {
+          (faq as HTMLElement).style.display = isExpanded ? "block" : "none";
+          // Forzamos un reflow antes de añadir la clase show
+          void (faq as HTMLElement).offsetWidth;
+
+          if (isExpanded) {
+            faq.classList.add("show");
+          } else {
+            faq.classList.remove("show");
+          }
+        });
+
+        showMoreButton.textContent = isExpanded
+          ? "Ver menos preguntas"
+          : "Ver más preguntas frecuentes";
+      });
+    }
+  });
+</script>

@@ -13,8 +13,8 @@ import Button from "../common/Button.astro";
     <header class="gm_info-header reveal">
       <img src="/gm-logo.svg" alt="Logo de GM Abogados Laboralistas" />
       <div class="gm_info-header-text">
-        <span>Información importante</span>
-        <h4>¡Toma nota!</h4>
+        <span>⚠️ Evita Estos Errores Que Te Harían Perder Tu Liquidación</span>
+        <h4>Urgente: Si Te Despidieron, Lee Esto Primero</h4>
       </div>
     </header>
     <div class="gm_info_content reveal">
@@ -22,27 +22,49 @@ import Button from "../common/Button.astro";
         <div class="gm_info-card-pulse"></div>
         <span><Ban /></span>
         <p>
-          <strong>NO</strong> firmes renuncia, <strong>NO</strong> firmes finiquito.
+          <strong>NUNCA</strong> firmes tu renuncia voluntaria o finiquito sin asesoría
+          legal. <span class="highlight"
+            >Aunque te presionen, amenacen o prometan pagarte después.</span
+          > Una firma puede hacerte perder hasta 20 meses de salario.
         </p>
       </article>
-      <article class="gm_info-card">
-        <div class="gm_info-card-pulse"></div>
-        <span><Call /></span>
-        <p>Asesórate con nosotros, somos especialistas.</p>
-      </article>
-      <article class="gm_info-card">
-        <div class="gm_info-card-pulse"></div>
-        <span><Money /></span>
-        <p>Los honorarios se pagan hasta que cobras.</p>
-      </article>
+
       <article class="gm_info-card">
         <div class="gm_info-card-pulse"></div>
         <span><Clock /></span>
-        <p>Recuerda... Solo tienes 2 meses para actuar.</p>
+        <p>
+          <strong>Tienes SOLO 2 meses</strong> desde tu despido para demandar tu
+          liquidación. <span class="highlight"
+            >Después de 60 días naturales, pierdes tu derecho legal.</span
+          > No dejes pasar el tiempo.
+        </p>
+      </article>
+
+      <article class="gm_info-card">
+        <div class="gm_info-card-pulse"></div>
+        <span><Call /></span>
+        <p>
+          <strong>Consulta GRATIS en 24 horas.</strong> Te decimos exactamente cuánto
+          puedes recuperar, si firmaste algo que te perjudica, y cómo proceder. <span
+            class="highlight">Sin costo, sin compromiso.</span
+          >
+        </p>
+      </article>
+
+      <article class="gm_info-card">
+        <div class="gm_info-card-pulse"></div>
+        <span><Money /></span>
+        <p>
+          <strong>Cero pesos de anticipo.</strong> No pagas abogado, trámites ni
+          costas judiciales hasta que recibas tu liquidación.
+          <span class="highlight">Si no ganamos, no pagas nada.</span>
+        </p>
       </article>
     </div>
     <footer class="gm_info-footer reveal">
-      <Button itsA="link" href="#contact">Obtén Asesoría Ahora</Button>
+      <Button itsA="link" href="#contact"
+        >Agendar Consulta Gratuita Ahora</Button
+      >
     </footer>
   </Container>
 </Section>
@@ -99,7 +121,6 @@ import Button from "../common/Button.astro";
     h4 {
       font-size: 2.4rem;
       color: var(--gm-title-text);
-      text-align: center;
       font-weight: 900;
       text-transform: uppercase;
       font-family: var(--gm-family-title);
@@ -116,7 +137,7 @@ import Button from "../common/Button.astro";
       animation: backgroundMove 3s linear infinite;
 
       @media screen and (width >= 1024px) {
-        font-size: 4.6rem;
+        font-size: 4rem;
       }
     }
   }
@@ -142,9 +163,18 @@ import Button from "../common/Button.astro";
     position: relative;
 
     @media screen and (width >= 1024px) {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
       padding: 1.4rem 1.2rem;
-      flex-direction: row;
       align-items: center;
+    }
+
+    span.highlight {
+      background: inherit;
+      padding: 0;
+      color: var(--gm-accent);
+      font-weight: 600;
     }
 
     span {

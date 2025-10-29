@@ -58,7 +58,7 @@ export function Card({
         role="button"
         aria-label="Botón para ver más información"
       >
-        {isShowContent ? "Ver menos" : "Más información"}
+        {isShowContent ? "Ver menos" : "¿Aplica Para Mí?"}
         <i className={`${isShowContent ? "rotate" : ""}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
